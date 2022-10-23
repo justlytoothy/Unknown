@@ -10,10 +10,10 @@ router.get('/example', (req, res) => {
 			return
 		}
 
-		console.log('connected as id ' + connection.threadId)
+		console.log('connected as id ' + conn.threadId)
 	})
 	conn.query('SELECT * FROM tasks', (err, rows, fields) => {
-		console.log(rows, fields)
+		console.log(rows)
 	})
 	conn.end()
 	return res.json({ bruh: 'here' })
